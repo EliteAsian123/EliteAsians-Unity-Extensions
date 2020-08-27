@@ -31,3 +31,42 @@ myVector.Invert(); // returns Vector2(-1f, -1f);
 myVector.InvertX(); // returns Vector2(-1f, 1f);
 myVector.InvertY(); // returns Vector2(1f, -1f);
 ```
+# VectorExtensions Reference
+## `Vector2.WithX(float x)`
+Replaces the X component of a Vector2 with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(1f, 1f);
+myVector.WithX(8f); // returns Vector2(8f, 1f);
+```
+
+## `Vector2.WithY(float y)`
+Replaces the Y component of a Vector2 with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(1f, 1f);
+myVector.WithY(8f); // returns Vector2(1f, 8f);
+```
+
+## `Vector2.AddX(float x)`
+Adds to the X component of a Vector2 with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.AddX(8f); // returns Vector2(10f, 2f);
+```
+
+## `Vector2.AddY(float y)`
+Adds to the Y component of a Vector2 with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.AddY(8f); // returns Vector2(2f, 10f);
+```
+
+
+# Rest TODO
