@@ -1,4 +1,4 @@
-# VectorExtensions
+# VectorExtensions (INCOMPLETE README)
 This extension class adds additional functionality to the `Vector2`, `Vector3`, `Vector2Int` and `Vector3Int` classes. Here are some quick examples of what it can do:
 
 ```cs
@@ -68,5 +68,101 @@ Vector2 myVector = new Vector2(2f, 2f);
 myVector.AddY(8f); // returns Vector2(2f, 10f);
 ```
 
+## `Vector2.InvertX()`
+Inverts the X component of a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.InvertX(); // returns Vector2(-2f, 2f);
+```
 
-# Rest TODO
+## `Vector2.InvertY()`
+Inverts the Y component of a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.InvertY(); // returns Vector2(2f, -2f);
+```
+
+## `Vector2.Invert()`
+Inverts both the X and the Y component of a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.Invert(); // returns Vector2(-2f, -2f);
+```
+
+## `Vector3.WithX(float x)`
+Replaces the X component of a Vector3 with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector3 myVector = new Vector3(1f, 1f, 1f);
+myVector.WithX(8f); // returns Vector3(8f, 1f, 1f);
+```
+
+## `Vector3.WithY(float y)`
+Replaces the Y component of a Vector3 with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector3 myVector = new Vector3(1f, 1f, 1f);
+myVector.WithY(8f); // returns Vector3(1f, 8f, 1f);
+```
+
+## `Vector3.WithZ(float z)`
+Replaces the Z component of a Vector3 with the specified value (`z`).<br>
+<br>
+**Example**
+```cs
+Vector3 myVector = new Vector3(1f, 1f, 1f);
+myVector.WithZ(8f); // returns Vector3(1f, 1f, 8f);
+```
+
+## `Vector3.AddX(float x)`
+Adds to the X component of a Vector2 with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.AddX(8f); // returns Vector2(10f, 2f);
+```
+
+## `Vector3.AddY(float y)`
+Adds to the Y component of a Vector2 with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.AddY(8f); // returns Vector2(2f, 10f);
+```
+
+## `Vector3.InvertX()`
+Inverts the X component of a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.InvertX(); // returns Vector2(-2f, 2f);
+```
+
+## `Vector3.InvertY()`
+Inverts the Y component of a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.InvertY(); // returns Vector2(2f, -2f);
+```
+
+## `Vector3.Invert()`
+Inverts both the X and the Y component of a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(2f, 2f);
+myVector.Invert(); // returns Vector2(-2f, -2f);
+```
