@@ -1,4 +1,4 @@
-# VectorExtensions (INCOMPLETE README)
+# VectorExtensions
 This extension class adds additional functionality to the `Vector2`, `Vector3`, `Vector2Int` and `Vector3Int` classes. Here are some quick examples of what it can do:
 
 ```cs
@@ -183,4 +183,76 @@ Inverts the X, Y and Z components of a Vector3.<br>
 ```cs
 Vector3 myVector = new Vector3(2f, 2f, 2f);
 myVector.Invert(); // returns Vector3(-2f, -2f, -2f);
+```
+
+## `Vector2Int.ToVector3()`
+Converts a Vector2Int into a Vector3.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(1, 4);
+myVector.ToVector3(); // returns Vector3(1f, 4f, 0f);
+```
+
+## `Vector3Int.ToVector3()`
+Converts a Vector3Int into a Vector3.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(1, 4, -5);
+myVector.ToVector3(); // returns Vector3(1f, 4f, -5f);
+```
+
+## `Vector2Int.ToVector2()`
+Converts a Vector2Int into a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(1, 4);
+myVector.ToVector2(); // returns Vector2(1f, 4f);
+```
+
+## `Vector3Int.ToVector2()`
+Converts a Vector3Int into a Vector2.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(1, 4, -5);
+myVector.ToVector2(); // returns Vector2(1f, 4f);
+```
+
+## `Vector3.ToVector3Int()`
+Converts a Vector3 into a Vector3Int.<br>
+<br>
+**Example**
+```cs
+Vector3 myVector = new Vector3(-2.3f, 5f, 7f);
+myVector.ToVector3Int(); // returns Vector3Int(-2, 5, 7);
+```
+
+## `Vector2.ToVector3Int()`
+Converts a Vector2 into a Vector3Int.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(-2.3f, 5f);
+myVector.ToVector3Int(); // returns Vector3Int(-2, 5, 0);
+```
+
+## `Vector3.ToVector2Int()`
+Converts a Vector3 into a Vector2Int.<br>
+<br>
+**Example**
+```cs
+Vector3 myVector = new Vector3(-2.3f, 5f, 7f);
+myVector.ToVector2Int(); // returns Vector2Int(-2, 5);
+```
+
+## `Vector2.ToVector2Int()`
+Converts a Vector2 into a Vector2Int.<br>
+<br>
+**Example**
+```cs
+Vector2 myVector = new Vector2(-2.3f, 5f);
+myVector.ToVector2Int(); // returns Vector2Int(-2, 5);
 ```
