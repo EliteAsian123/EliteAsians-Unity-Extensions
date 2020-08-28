@@ -11,4 +11,4 @@ To install these to your Unity project, simply clone this repository and plop th
 This project uses a [MIT License](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/LICENSE). Basically, you can use this in your game without permission, and you can modify as much as you want.
 
 # Feature Requests and Issues
-If you find an issue, or want to request a feature, create an issue in the [issues tab(https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/issues).
+If you find an issue, or want to request a feature, create an issue in the [issues tab](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/issues).
