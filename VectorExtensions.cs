@@ -81,6 +81,86 @@
 		}
 
 		/*
+		 *	Vector2Int Utils
+		 */
+
+		public static Vector2Int WithX(this Vector2Int vec, int x) {
+			return new Vector2Int(x, vec.y);
+		}
+
+		public static Vector2Int WithY(this Vector2Int vec, int y) {
+			return new Vector2Int(vec.x, y);
+		}
+
+
+		public static Vector2Int AddX(this Vector2Int vec, int x) {
+			return new Vector2Int(vec.x + x, vec.y);
+		}
+
+		public static Vector2Int AddY(this Vector2Int vec, int y) {
+			return new Vector2Int(vec.x, vec.y + y);
+		}
+
+
+		public static Vector2Int InvertX(this Vector2Int vec) {
+			return new Vector2Int(-vec.x, vec.y);
+		}
+
+		public static Vector2Int InvertY(this Vector2Int vec) {
+			return new Vector2Int(vec.x, -vec.y);
+		}
+
+		public static Vector2Int Invert(this Vector2Int vec) {
+			return new Vector2Int(-vec.x, -vec.y);
+		}
+
+		/*
+		 *	Vector3Int Utils
+		 */
+
+		public static Vector3Int WithX(this Vector3Int vec, int x) {
+			return new Vector3Int(x, vec.y, vec.z);
+		}
+
+		public static Vector3Int WithY(this Vector3Int vec, int y) {
+			return new Vector3Int(vec.x, y, vec.z);
+		}
+
+		public static Vector3Int WithZ(this Vector3Int vec, int z) {
+			return new Vector3Int(vec.x, vec.y, z);
+		}
+
+
+		public static Vector3Int AddX(this Vector3Int vec, int x) {
+			return new Vector3Int(vec.x + x, vec.y, vec.z);
+		}
+
+		public static Vector3Int AddY(this Vector3Int vec, int y) {
+			return new Vector3Int(vec.x, vec.y + y, vec.z);
+		}
+
+		public static Vector3Int AddZ(this Vector3Int vec, int z) {
+			return new Vector3Int(vec.x, vec.y, vec.z + z);
+		}
+
+
+		public static Vector3Int InvertX(this Vector3Int vec) {
+			return new Vector3Int(-vec.x, vec.y, vec.z);
+		}
+
+		public static Vector3Int InvertY(this Vector3Int vec) {
+			return new Vector3Int(vec.x, -vec.y, vec.z);
+		}
+
+		public static Vector3Int InvertZ(this Vector3Int vec) {
+			return new Vector3Int(vec.x, vec.y, -vec.z);
+		}
+
+		public static Vector3Int Invert(this Vector3Int vec) {
+			return new Vector3Int(-vec.x, -vec.y, -vec.z);
+		}
+
+		/*
 		 *  VectorInt -> Vector
 		 */
 

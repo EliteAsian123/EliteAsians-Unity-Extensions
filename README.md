@@ -18,6 +18,8 @@ Debug.Log(myVector.Invert()); // Outputs "(-2, 50, -0.642)"
 Debug.Log(myVector.WithZ(0f)); // Outputs "(2, -50, 0)"
 
 Vector3Int myVectorInt = myVector.ToVector3Int(); // Converts the Vector3 to a Vector3Int
+
+Debug.Log(myVectorInt.WithY(-10)); // Outputs "(-2, -10, 1)"
 ```
 
 ## How to Install
