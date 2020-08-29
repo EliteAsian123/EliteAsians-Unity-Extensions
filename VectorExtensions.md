@@ -31,6 +31,10 @@ myVector.Invert(); // returns Vector2(-1f, -1f);
 myVector.InvertX(); // returns Vector2(-1f, 1f);
 myVector.InvertY(); // returns Vector2(1f, -1f);
 ```
+
+# Installation Guide
+To install VectorExtensions, clone this repository and put the [`VectorExtensions.cs`](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/VectorExtensions.cs) file into your Unity project. That's it!
+
 # VectorExtensions Reference
 ## `Vector2.WithX(float x)`
 Replaces the X component of a Vector2 with the specified value (`x`).<br>
