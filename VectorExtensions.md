@@ -206,6 +206,176 @@ myVector.Invert(); // returns Vector3(-2f, -2f, -2f);
 ```
 <hr>
 
+### `Vector2Int.WithX(int x)`
+Replaces the X component of a Vector2Int with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(1, 1);
+myVector.WithX(8); // returns Vector2Int(8, 1);
+```
+<hr>
+
+### `Vector2Int.WithY(int y)`
+Replaces the Y component of a Vector2Int with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(1, 1);
+myVector.WithY(8); // returns Vector2Int(1, 8);
+```
+<hr>
+
+### `Vector2Int.AddX(int x)`
+Adds to the X component of a Vector2Int with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(2, 2);
+myVector.AddX(8); // returns Vector2Int(10, 2);
+```
+<hr>
+
+### `Vector2Int.AddY(int y)`
+Adds to the Y component of a Vector2Int with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(2, 2);
+myVector.AddY(8); // returns Vector2Int(2, 10);
+```
+<hr>
+
+### `Vector2Int.InvertX()`
+Inverts the X component of a Vector2Int.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = newVector2IntVector2(2, 2);
+myVector.InvertX(); // returns Vector2Int(-2, 2);
+```
+<hr>
+
+### `Vector2Int.InvertY()`
+Inverts the Y component of a Vector2Int.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(2, 2);
+myVector.InvertY(); // returns Vector2Int(2, -2);
+```
+<hr>
+
+### `Vector2Int.Invert()`
+Inverts both the X and the Y component of a Vector2Int.<br>
+<br>
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(2, 2);
+myVector.Invert(); // returns Vector2Int(-2, -2);
+```
+<hr>
+
+### `Vector3Int.WithX(int x)`
+Replaces the X component of a Vector3Int with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(1, 1, 1);
+myVector.WithX(8); // returns Vector3Int(8, 1, 1);
+```
+<hr>
+
+### `Vector3Int.WithY(int y)`
+Replaces the Y component of a Vector3Int with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(1, 1, 1);
+myVector.WithY(8); // returns Vector3Int(1, 8, 1);
+```
+<hr>
+
+### `Vector3Int.WithZ(int z)`
+Replaces the Z component of a Vector3Int with the specified value (`z`).<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(1, 1, 1);
+myVector.WithZ(8); // returns Vector3Int(1, 1, 8);
+```
+<hr>
+
+### `Vector3Int.AddX(int x)`
+Adds to the X component of a Vector3Int with the specified value (`x`).<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(2, 2, 2);
+myVector.AddX(8); // returns Vector3Int(10, 2, 2);
+```
+<hr>
+
+### `Vector3Int.AddY(int y)`
+Adds to the Y component of a Vector3Int with the specified value (`y`).<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(2, 2, 2);
+myVector.AddY(8); // returns Vector3Int(2, 10, 2);
+```
+<hr>
+
+### `Vector3Int.AddZ(int z)`
+Adds to the Z component of a Vector3Int with the specified value (`z`).<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(2, 2, 2);
+myVector.AddZ(8); // returns Vector3Int(2, 2, 10);
+```
+<hr>
+
+### `Vector3Int.InvertX()`
+Inverts the X component of a Vector3Int.<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = Vector3Int Vector3(2, 2, 2);
+myVector.InvertX(); // returns Vector3Int(-2, 2, 2);
+```
+<hr>
+
+### `Vector3Int.InvertY()`
+Inverts the Y component of a Vector3Int.<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(2, 2, 2);
+myVector.InvertY(); // returns Vector3Int(2, -2, 2);
+```
+<hr>
+
+### `Vector3Int.InvertZ()`
+Inverts the Z component of a Vector3Int.<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(2, 2, 2);
+myVector.InvertZ(); // returns Vector3Int(2, 2, -2);
+```
+<hr>
+
+### `Vector3Int.Invert()`
+Inverts the X, Y and Z components of a Vector3Int.<br>
+<br>
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(2, 2, 2);
+myVector.Invert(); // returns Vector3Int(-2, -2, -2);
+```
+<hr>
+
 ### `Vector2Int.ToVector3()`
 Converts a Vector2Int into a Vector3.<br>
 <br>
