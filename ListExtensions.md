@@ -73,4 +73,3 @@ Picks a randoms element of the `IList` using `System.Random`. Does not modify th
 int[] myArray = new int[] { 1, 2, 3 };
 myArray.Pick(new System.Random()); // returns "1", "2", or "3"
 ```
-<hr>
