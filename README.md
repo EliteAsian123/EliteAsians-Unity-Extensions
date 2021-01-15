@@ -3,6 +3,7 @@ This is a pack of scripts that contain extension methods that adds more function
 
 ## Extensions
 - [VectorExtensions](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/VectorExtensions.md) (Contains extension methods for `Vector2` and `Vector3`)
+- [ListExtensions](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/ListExtensions.md) (Contains extension methods for `System.Collections.Generic.IList<T>`)
 
 ## Examples
 Here are some examples of what this pack can do:
@@ -20,6 +21,18 @@ Debug.Log(myVector.WithZ(0f)); // Outputs "(2, -50, 0)"
 Vector3Int myVectorInt = myVector.ToVector3Int(); // Converts the Vector3 to a Vector3Int
 
 Debug.Log(myVectorInt.WithY(-10)); // Outputs "(2, -10, 1)"
+
+
+
+int[] arr = int[] { 1, 2, 3, 4, 5 };
+
+Debug.Log(arr.Pick()); // Outputs a random element of this array (example: "3")
+
+arr.Shuffle(); // Shuffles/randomizes the array
+
+foreach (int i in arr) { // Outputs the shuffled/randomized array (example: "2 3 5 1 4")
+	Debug.Log(i);
+}
 ```
 
 ## How to Install
