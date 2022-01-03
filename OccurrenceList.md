@@ -20,6 +20,21 @@ occurrences.GetCount("there"); // returns 24
 occurrences.Remove("hello");
 occurrences.GetCount("hello"); // returns 1
 
+
+
+// Make an awesome list
+List<string> list = new List<string>();
+list.Add("hello");
+list.AddRange(new string[] { "world", "foo", "hello" });
+
+// Create an OccurrenceList from that list
+OccurrenceList<string> moreOccurrences = OccurrenceList<string>.CreateFromEnumerable(list);
+
+// Get occurrences
+moreOccurrences.GetCount("hello"); // returns 2
+moreOccurrences.GetCount("world"); // returns 1
+moreOccurrences.GetCount("hello there!"); // returns 0
+
 ```
 
 ## Installation Guide
@@ -65,7 +80,7 @@ occurrences.RemoveAll("hello"); // Sets the occurrences of "hello" to 0
 <hr>
 
 ### `OccurrenceList<T>.RemoveAllZeros()`
-Removes all entries from the list where the number of occurences is equal to 0.<br>
+Removes all entries from the list where the number of occurences is equal to 0. This can be useful when looping with `foreach`, or when converting into dictionaries.<br>
 <br>
 **Example**
 ```cs
@@ -107,4 +122,22 @@ occurrences.ToDictionary(); /* returns
 	{ "world", 32 }
 }
 */
+```
+<hr>
+
+### `static OccurrenceList<T> CreateFromEnumerable(IEnumerable enumerable)`
+Creates an `OccurrenceList<T>` from the provided `IEnumerable`.<br>
+<br>
+**Example**
+```cs
+OccurrenceList<string> occurrences = OccurrenceList<string>.CreateFromEnumerable(new string[] { 
+	"hello", 
+	"world", 
+	"hello", 
+	"there", 
+	"hello" 
+});
+
+occurrences.GetCount("hello"); // returns 3
+occurrences.GetCount("world"); // returns 1
 ```
