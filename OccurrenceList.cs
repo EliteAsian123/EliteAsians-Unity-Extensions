@@ -76,5 +76,27 @@ namespace System.Collections.Generic {
 		IEnumerator<KeyValuePair<T, int>> IEnumerable<KeyValuePair<T, int>>.GetEnumerator() {
 			return occurrences.GetEnumerator();
 		}
+
+		/// <returns>
+		/// An <c>OccurrenceList</c> created from the provided <c><see cref="IEnumerable"/></c>.<br/>
+		/// The number of times an element appears can be recieved from the <c><see cref="GetCount(T)"/></c> method.
+		/// </returns>
+		/// <param name="enumerable">The <c><see cref="IEnumerable"/></c> to check the occurrences from.</param>
+		public static OccurrenceList<T> CreateFromEnumerable(IEnumerable enumerable) {
+			OccurrenceList<T> occurrenceList = new();
+
+			IEnumerator enumerator = enumerable.GetEnumerator();
+			enumerator.Reset();
+
+			while (true) {
+				if (!enumerator.MoveNext()) {
+					break;
+				}
+
+				occurrenceList.Add((T) enumerator.Current);
+			}
+
+			return occurrenceList;
+		}
 	}
 }
