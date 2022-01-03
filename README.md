@@ -4,6 +4,7 @@ This is a pack of scripts that contain extension methods that adds more function
 ## Extensions
 - [VectorExtensions](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/VectorExtensions.md) (Contains extension methods for `Vector2` and `Vector3`)
 - [ListExtensions](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/ListExtensions.md) (Contains extension methods for `System.Collections.Generic.IList<T>`)
+- [OccurrenceList](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/OccurrenceList.md) (Contains an enumerable class `OccurrenceList<T>`)
 
 ## Examples
 Here are some examples of what this pack can do:
