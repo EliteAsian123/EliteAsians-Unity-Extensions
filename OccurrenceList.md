@@ -38,13 +38,13 @@ moreOccurrences.GetCount("hello there!"); // returns 0
 ```
 
 ## Installation Guide
-To install OccurrenceList, clone this repository and put the [`OccurrenceList.cs`](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/OccurrenceList.cs) file into your Unity project.<br>
+To install OccurrenceList, clone this repository and put the [`OccurrenceList.cs`](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/OccurrenceList.cs) file into your Unity project.<br />
 Make sure that you are `using System.Collections.Generic;`.
 
 ## Reference
 ### `OccurrenceList<T>.Add(T item, int count = 1)`
-Adds an (or of `count`) occurrence(s) to the list. Automatically creates an entry if it isn't in the list.<br>
-<br>
+Adds an (or of `count`) occurrence(s) to the list. Automatically creates an entry if it isn't in the list.<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = new OccurrenceList<string>();
@@ -52,11 +52,11 @@ OccurrenceList<string> occurrences = new OccurrenceList<string>();
 occurrences.Add("hello"); // Adds 1 occurrence of "hello"
 occurrences.Add("hello", 2); // Adds 2 occurrences of "hello"
 ```
-<hr>
+<hr />
 
-### `OccurrenceList<T>.Remove(T item, int count = 1)`
-Removes an (or of `count`) occurrence(s) from the list. Does not remove the entry from the list if the count is zero.<br>
-<br>
+### `OccurrenceList<T>.Remove(T item, int count = 1, bool removeIfZero = false)`
+Removes an (or of `count`) occurrence(s) from the list. Does not remove the entry from the list if the count is zero unless `removeIfZero` is true.<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = new OccurrenceList<string>();
@@ -65,11 +65,11 @@ occurrences.Add("hello", 32);
 occurrences.Remove("hello"); // Sets the occurrences of "hello" to 31
 occurrences.Remove("hello", 2); // Sets the occurrences of "hello" to 29
 ```
-<hr>
+<hr />
 
-### `OccurrenceList<T>.RemoveAll(T item)`
-Sets the amount of occurences of a specific item to zero. Does not remove the entry from the list.<br>
-<br>
+### `OccurrenceList<T>.RemoveAll(T item, bool removeFromList = false)`
+Sets the amount of occurences of a specific item to zero. Does not remove the entry from the list unless `removeFromList` is true.<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = new OccurrenceList<string>();
@@ -77,11 +77,11 @@ occurrences.Add("hello", 53);
 
 occurrences.RemoveAll("hello"); // Sets the occurrences of "hello" to 0
 ```
-<hr>
+<hr />
 
 ### `OccurrenceList<T>.RemoveAllZeros()`
-Removes all entries from the list where the number of occurences is equal to 0. This can be useful when looping with `foreach`, or when converting into dictionaries.<br>
-<br>
+Removes all entries from the list where the number of occurences is equal to 0. This can be useful when looping with `foreach`, or when converting into dictionaries.<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = new OccurrenceList<string>();
@@ -93,11 +93,11 @@ occurrences.RemoveAll("hello"); // "hello" to 0
 occurrences.RemoveAllZeros(); // Removes all entries equal to 0 (so "hello")
 // "hello" is no longer in the list (if used in enumeration)
 ```
-<hr>
+<hr />
 
 ### `OccurrenceList<T>.GetCount(T item)`
-Gets the number of times `item` occurs.<br>
-<br>
+Gets the number of times `item` occurs.<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = new OccurrenceList<string>();
@@ -105,11 +105,40 @@ occurrences.Add("hello", 53);
 
 occurrences.GetCount("hello"); // returns 53
 ```
-<hr>
+<hr />
+
+### `OccurrenceList<T>.IsEmpty(T item)`
+Returns whether or not the `OccurrenceList<T>` has any items in it. All entries with a count of 0 are disregarded.<br />
+<br />
+**Example**
+```cs
+OccurrenceList<string> occurrences = new OccurrenceList<string>();
+occurrences.Add("hello", 32);
+
+occurrences.IsEmpty(); // returns false
+
+occurrences.RemoveAll("hello");
+
+occurrences.IsEmpty(); // returns true
+```
+<hr />
+
+### `OccurrenceList<T>.GetFirst()`
+Returns the first element in the `OccurrenceList<T>` in `KeyValuePair<T, int>` form. Throws a `IndexOutOfRangeException` if the `OccurrenceList<t>` is empty.<br />
+<br />
+**Example**
+```cs
+OccurrenceList<string> occurrences = new OccurrenceList<string>();
+occurrences.Add("hello", 32);
+occurrences.Add("world", 24);
+
+occurrences.GetFirst(); // returns KeyValuePair<"hello", 32>
+```
+<hr />
 
 ### `OccurrenceList<T>.ToDictionary()`
-Converts the `OccurrenceList<T>` to a `Dictionary<T,int>`<br>
-<br>
+Converts the `OccurrenceList<T>` to a `Dictionary<T,int>`<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = new OccurrenceList<string>();
@@ -123,11 +152,11 @@ occurrences.ToDictionary(); /* returns
 }
 */
 ```
-<hr>
+<hr />
 
 ### `static OccurrenceList<T> CreateFromEnumerable(IEnumerable enumerable)`
-Creates an `OccurrenceList<T>` from the provided `IEnumerable`.<br>
-<br>
+Creates an `OccurrenceList<T>` from the provided `IEnumerable`.<br />
+<br />
 **Example**
 ```cs
 OccurrenceList<string> occurrences = OccurrenceList<string>.CreateFromEnumerable(new string[] { 

@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace System.Collections.Generic {
 	/// <summary>
 	/// Stores the number of times <c>T</c> occurs. Occurrences can easily be added and manipulated.
@@ -30,8 +32,13 @@ namespace System.Collections.Generic {
 		/// </summary>
 		/// <param name="item">The key or item that has an occurence.</param>
 		/// <param name="count">The number of occurences that should be removed.</param>
-		public void Remove(T item, int count = 1) {
+		/// <param name="removeIfZero">Whether or not the element should be removed from the list if it the count reaches 0.</param>
+		public void Remove(T item, int count = 1, bool removeIfZero = false) {
 			Add(item, -count);
+
+			if (removeIfZero && occurrences[item] <= 0) {
+				occurrences.Remove(item);
+			}
 		}
 
 		/// <summary>
@@ -39,8 +46,13 @@ namespace System.Collections.Generic {
 		/// This does not remove it from the list. See: <see cref="RemoveAllZeros"/>
 		/// </summary>
 		/// <param name="item">The key or item in which the occurences should be set to zero.</param>
-		public void RemoveAll(T item) {
-			occurrences[item] = 0;
+		/// <param name="removeFromList">Whether or not the element should be removed from the list instead of its count being set to 0.</param>
+		public void RemoveAll(T item, bool removeFromList = false) {
+			if (removeFromList) {
+				occurrences.Remove(item);
+			} else {
+				occurrences[item] = 0;
+			}
 		}
 
 		/// <summary>
@@ -60,6 +72,32 @@ namespace System.Collections.Generic {
 		/// <param name="item">The key or item to check.</param>
 		public int GetCount(T item) {
 			return occurrences.ContainsKey(item) ? occurrences[item] : 0;
+		}
+
+		/// <returns>
+		/// Whether or not the list contains any items. Items with a count of zero are not included.
+		/// </returns>
+		public bool IsEmpty() {
+			foreach (KeyValuePair<T, int> pair in occurrences) {
+				if (pair.Value != 0) {
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		/// <returns>
+		/// The first element in the list of occurrences.
+		/// </returns>
+		public KeyValuePair<T, int> GetFirst() {
+			foreach (KeyValuePair<T, int> pair in occurrences) {
+				if (pair.Value != 0) {
+					return pair;
+				}
+			}
+
+			throw new IndexOutOfRangeException("The OccurrenceList is empty.");
 		}
 
 		/// <returns>

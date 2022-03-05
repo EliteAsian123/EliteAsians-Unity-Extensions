@@ -28,8 +28,8 @@ To install ListExtensions, clone this repository and put the [`ListExtensions.cs
 
 ## Reference
 ### `IList.Shuffle()`
-Shuffles the `IList` using Unity's random class. This DOES modify the `IList`.<br>
-<br>
+Shuffles the `IList` using Unity's random class. This DOES modify the `IList`.<br />
+<br />
 **Example**
 ```cs
 int[] myArray = new int[] { 1, 2, 3 };
@@ -39,11 +39,11 @@ foreach (int i in myArray) { // Prints out the array but shuffled/randomized (ex
 	Debug.Log(i);
 }
 ```
-<hr>
+<hr />
 
 ### `IList.Shuffle(System.Random random)`
-Shuffles the `IList` using `System.Random`. This DOES modify the `IList`.<br>
-<br>
+Shuffles the `IList` using `System.Random`. This DOES modify the `IList`.<br />
+<br />
 **Example**
 ```cs
 int[] myArray = new int[] { 1, 2, 3 };
@@ -53,21 +53,21 @@ foreach (int i in myArray) { // Prints out the array but shuffled/randomized (ex
 	Debug.Log(i);
 }
 ```
-<hr>
+<hr />
 
 ### `IList.Pick()`
-Picks a randoms element of the `IList` using Unity's random class. Does not modify the `IList`.<br>
-<br>
+Picks a randoms element of the `IList` using Unity's random class. Does not modify the `IList`.<br />
+<br />
 **Example**
 ```cs
 int[] myArray = new int[] { 1, 2, 3 };
 myArray.Pick(); // returns "1", "2", or "3"
 ```
-<hr>
+<hr />
 
 ### `IList.Pick(System.Random random)`
-Picks a randoms element of the `IList` using `System.Random`. Does not modify the `IList`.<br>
-<br>
+Picks a randoms element of the `IList` using `System.Random`. Does not modify the `IList`.<br />
+<br />
 **Example**
 ```cs
 int[] myArray = new int[] { 1, 2, 3 };
