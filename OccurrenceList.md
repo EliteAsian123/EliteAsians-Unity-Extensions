@@ -38,7 +38,7 @@ moreOccurrences.GetCount("hello there!"); // returns 0
 ```
 
 ## Installation Guide
-To install OccurrenceList, clone this repository and put the [`OccurrenceList.cs`](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/OccurrenceList.cs) file into your Unity project.<br />
+To install OccurrenceList, clone this repository and put the [`OccurrenceList.cs`](./OccurrenceList.cs) file into your Unity project.<br />
 Make sure that you are `using System.Collections.Generic;`.
 
 ## Reference

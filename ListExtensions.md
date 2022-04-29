@@ -24,7 +24,7 @@ Debug.Log(list.Pick()); // Outputs a random element of this list (example: "50")
 ```
 
 ## Installation Guide
-To install ListExtensions, clone this repository and put the [`ListExtensions.cs`](https://github.com/EliteAsian123/EliteAsians-Unity-Extensions/blob/master/ListExtensions.cs) file into your Unity project. That's it!
+To install ListExtensions, clone this repository and put the [`ListExtensions.cs`](./ListExtensions.cs) file into your Unity project. That's it!
 
 ## Reference
 ### `IList.Shuffle()`
