@@ -2,9 +2,9 @@
 This is a pack of scripts that contain extension methods that adds more functionality to existing Unity classes such as `Vector2` and `Vector3`. So far, this repository is quite small, but I will be adding different extensions over time.
 
 ## Extensions
-- [VectorExtensions](./VectorExtensions.md) (Contains extension methods for `Vector2` and `Vector3`)
-- [ListExtensions](./ListExtensions.md) (Contains extension methods for `System.Collections.Generic.IList<T>`)
-- [OccurrenceList](./OccurrenceList.md) (Contains an enumerable class `OccurrenceList<T>`)
+- [VectorExtensions](./Extensions/VectorExtensions.md) (Contains extension methods for `Vector2` and `Vector3`)
+- [ListExtensions](./Extensions/ListExtensions.md) (Contains extension methods for `System.Collections.Generic.IList<T>`)
+- [OccurrenceList](./Extensions/OccurrenceList.md) (Contains an enumerable class `OccurrenceList<T>`)
 
 ## Examples
 Here are some examples of what this pack can do:
