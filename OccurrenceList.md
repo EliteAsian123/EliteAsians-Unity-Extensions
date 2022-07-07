@@ -154,6 +154,21 @@ occurrences.ToDictionary(); /* returns
 ```
 <hr />
 
+### `OccurrenceList<T>.Clear()`
+Clears the `OccurrenceList<T>`. This *completely removes* all elements in the `OccurenceList<T>`.<br />
+<br />
+**Example**
+```cs
+OccurrenceList<string> occurrences = new OccurrenceList<string>();
+occurrences.Add("hello", 53);
+occurrences.Add("world", 32);
+
+occurences.Clear();
+
+occurrences.IsEmpty(); // returns true
+```
+<hr />
+
 ### `static OccurrenceList<T> CreateFromEnumerable(IEnumerable enumerable)`
 Creates an `OccurrenceList<T>` from the provided `IEnumerable`.<br />
 <br />

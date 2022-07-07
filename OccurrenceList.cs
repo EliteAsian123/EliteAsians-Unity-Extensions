@@ -1,10 +1,8 @@
-using System.Linq;
-
 namespace System.Collections.Generic {
 	/// <summary>
 	/// Stores the number of times <c>T</c> occurs. Occurrences can easily be added and manipulated.
 	/// </summary>
-	public class OccurrenceList<T> : IEnumerable, IEnumerable<KeyValuePair<T, int>> {
+	public class OccurrenceList<T> : IEnumerable<KeyValuePair<T, int>> {
 		/*
 		 *	OccurrenceList
 		 */
@@ -59,7 +57,7 @@ namespace System.Collections.Generic {
 		/// Removes all of the items where the number of times it occurs is zero.
 		/// </summary>
 		public void RemoveAllZeros() {
-			foreach (KeyValuePair<T, int> pair in new Dictionary<T, int>(occurrences)) {
+			foreach (var pair in new Dictionary<T, int>(occurrences)) {
 				if (pair.Value == 0) {
 					occurrences.Remove(pair.Key);
 				}
@@ -78,7 +76,7 @@ namespace System.Collections.Generic {
 		/// Whether or not the list contains any items. Items with a count of zero are not included.
 		/// </returns>
 		public bool IsEmpty() {
-			foreach (KeyValuePair<T, int> pair in occurrences) {
+			foreach (var pair in occurrences) {
 				if (pair.Value != 0) {
 					return false;
 				}
@@ -91,13 +89,20 @@ namespace System.Collections.Generic {
 		/// The first element in the list of occurrences.
 		/// </returns>
 		public KeyValuePair<T, int> GetFirst() {
-			foreach (KeyValuePair<T, int> pair in occurrences) {
+			foreach (var pair in occurrences) {
 				if (pair.Value != 0) {
 					return pair;
 				}
 			}
 
 			throw new IndexOutOfRangeException("The OccurrenceList is empty.");
+		}
+		
+		/// <summary>
+		/// Clears the occurrences list.
+		/// </summary>
+		public void Clear() {
+			occurrences.Clear();
 		}
 
 		/// <returns>
@@ -106,7 +111,7 @@ namespace System.Collections.Generic {
 		public Dictionary<T, int> ToDictionary() {
 			return new Dictionary<T, int>(occurrences);
 		}
-
+		
 		public IEnumerator GetEnumerator() {
 			return occurrences.GetEnumerator();
 		}
