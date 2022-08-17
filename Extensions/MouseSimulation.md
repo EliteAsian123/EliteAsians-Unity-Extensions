@@ -1,11 +1,12 @@
-# MouseSimulation
-This static class gives you the ability to move the player's mouse cursor and simulate a mouse click. This usually is not recommended, but it is really useful for controller support in desktop games.
+# ~~MouseSimulation~~
 
 > **Warning**
 >
-> This class only works on Windows and Ubuntu (or any other linux distro that uses X11).
-> It will **not work** on Mac OS X. 
-> I hope to add support for Mac OS X in the future, but I currently don't have access to a Mac. 
+> This class is **obsolete**. Use Unity's new [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/QuickStartGuide.html)
+> with `Mouse.current.WarpCursorPosition` and `VirtualMouseInput` instead.
+> Unity's Input System provides more crossplatform compatibility than this class which only provides support for `Windows 10` and some `Linux` systems.
+
+This static class gives you the ability to move the player's mouse cursor and simulate a mouse click. This usually is not recommended, but it is really useful for controller support in desktop games.
 
 ```cs
 using UnityEngine;

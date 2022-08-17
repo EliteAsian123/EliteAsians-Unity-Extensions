@@ -5,7 +5,7 @@ This is a pack of scripts that contain extension methods that adds more function
 - [VectorExtensions](./Extensions/VectorExtensions.md) (Contains extension methods for `Vector2` and `Vector3`)
 - [ListExtensions](./Extensions/ListExtensions.md) (Contains extension methods for `System.Collections.Generic.IList<T>`)
 - [OccurrenceList](./Extensions/OccurrenceList.md) (Contains an enumerable class `OccurrenceList<T>`)
-- [MouseSimulation](./Extensions/MouseSimulation.md) (Contains a class that simulates mouse input)
+- ~~[MouseSimulation](./Extensions/MouseSimulation.md) (Contains a class that simulates mouse input)~~ (Obsolete. See link)
 
 ## Examples
 Here are some examples of what this pack can do:
