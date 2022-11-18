@@ -107,7 +107,7 @@ occurrences.GetCount("hello"); // returns 53
 ```
 <hr />
 
-### `OccurrenceList<T>.IsEmpty(T item)`
+### `OccurrenceList<T>.IsEmpty()`
 Returns whether or not the `OccurrenceList<T>` has any items in it. All entries with a count of 0 are disregarded.<br />
 <br />
 **Example**
