@@ -106,6 +106,16 @@ myVector.Invert(); // returns Vector2(-2f, -2f);
 ```
 <hr />
 
+### `Vector2.Abs()`
+Takes the absolute value of both the X and the Y component of a Vector2.<br />
+<br />
+**Example**
+```cs
+Vector2 myVector = new Vector2(-5f, 2f);
+myVector.Abs(); // returns Vector2(5f, 2f);
+```
+<hr />
+
 ### `Vector3.WithX(float x)`
 Replaces the X component of a Vector3 with the specified value (`x`).<br />
 <br />
@@ -206,6 +216,16 @@ myVector.Invert(); // returns Vector3(-2f, -2f, -2f);
 ```
 <hr />
 
+### `Vector3.Abs()`
+Takes the absolute value of the X, Y, and Z components of a Vector3.<br />
+<br />
+**Example**
+```cs
+Vector3 myVector = new Vector3(-5f, 2f, -0.5f);
+myVector.Abs(); // returns Vector3(5f, 2f, 0.5f);
+```
+<hr />
+
 ### `Vector2Int.WithX(int x)`
 Replaces the X component of a Vector2Int with the specified value (`x`).<br />
 <br />
@@ -273,6 +293,16 @@ Inverts both the X and the Y component of a Vector2Int.<br />
 ```cs
 Vector2Int myVector = new Vector2Int(2, 2);
 myVector.Invert(); // returns Vector2Int(-2, -2);
+```
+<hr />
+
+### `Vector2Int.Abs()`
+Takes the absolute value of both the X and the Y component of a Vector2Int.<br />
+<br />
+**Example**
+```cs
+Vector2Int myVector = new Vector2Int(-5, 2);
+myVector.Abs(); // returns Vector2Int(5, 2);
 ```
 <hr />
 
@@ -373,6 +403,16 @@ Inverts the X, Y and Z components of a Vector3Int.<br />
 ```cs
 Vector3Int myVector = new Vector3Int(2, 2, 2);
 myVector.Invert(); // returns Vector3Int(-2, -2, -2);
+```
+<hr />
+
+### `Vector3Int.Abs()`
+Takes the absolute value of the X, Y, and Z components of a Vector3Int.<br />
+<br />
+**Example**
+```cs
+Vector3Int myVector = new Vector3Int(-5, 2, 0);
+myVector.Abs(); // returns Vector3Int(5, 2, 0);
 ```
 <hr />
 
